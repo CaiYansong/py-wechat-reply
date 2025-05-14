@@ -25,7 +25,7 @@ wx.SwitchToThisWindow()#ListControl()方法用于列出所有子级窗口，而S
 hw = wx.ListControl(Name='会话')
 # 通过pd读取数据
 df = pd.read_csv('回复数据.csv', encoding='utf-8')
-print(df)
+# print(df)
 
 temp_concat_name = '文件传输助手'
 target_concat_name = '牧心CP'
@@ -34,7 +34,7 @@ conversations = hw.GetChildren()  # GetChildren()方法，获取会话列表中�
 
 # 死循环接收消息
 while is_running and True:
-    time.sleep(2)  # 参数是秒为单位，所以 2000ms 对应 2 秒
+    time.sleep(20)  # 参数是秒为单位，所以 2000ms 对应 2 秒
     for conversation in conversations:
         contact_name = conversation.Name
         if contact_name.startswith(target_concat_name):
